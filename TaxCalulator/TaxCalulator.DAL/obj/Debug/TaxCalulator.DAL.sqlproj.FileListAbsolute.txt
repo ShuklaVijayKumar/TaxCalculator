@@ -1,0 +1,7 @@
+C:\Action\KPMG\TaxCalulator\TaxCalulator.DAL\bin\Debug\TaxCalulator.DAL.dacpac
+C:\Action\KPMG\TaxCalulator\TaxCalulator.DAL\obj\Debug\Model.xml
+C:\Action\KPMG\TaxCalulator\TaxCalulator.DAL\obj\Debug\refactor.xml
+C:\Action\KPMG\TaxCalulator\TaxCalulator.DAL\obj\Debug\postdeploy.sql
+C:\Action\KPMG\TaxCalulator\TaxCalulator.DAL\obj\Debug\predeploy.sql
+C:\Action\KPMG\TaxCalulator\TaxCalulator.DAL\obj\Debug\TaxCalulator.DAL.dll
+C:\Action\KPMG\TaxCalulator\TaxCalulator.DAL\obj\Debug\TaxCalulator.DAL.pdb

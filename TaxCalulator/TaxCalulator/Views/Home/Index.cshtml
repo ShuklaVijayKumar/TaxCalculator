@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<html>
+<head>
+    <title>Upload Example</title>
+    <script src="~/Scripts/jquery-1.10.2.intellisense"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#Upload").click(function () {
+                var formData = new FormData();
+                var totalFiles = document.getElementById("FileUpload").files.length;
+                for (var i = 0; i < totalFiles; i++) {
+                    var file = document.getElementById("FileUpload").files[i];
+
+                    formData.append("FileUpload", file);
+                }
+                $.ajax({
+                    type: "POST",
+                    url: '/Home/Upload',
+                    data: formData,
+                    dataType: 'json',
+                    contentType: false,
+                    processData: false,
+                    success: function (result) {
+                        $('.file_name').html(result.name);
+                        $('.file_type').html(result.type);
+                        $('.file_size').html(result.size);
+                    },
+                    error: function (error) {
+                        alert("errror");
+                    }
+                });
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <br />
+    <hr />
+    <input type="file" id="FileUpload" multiple />
+    <input type="button" id="Upload" value="Upload" />
+
+    <br />
+    <br />
+    <div class="file_name"></div>
+    <br />
+    <div class="file_type"></div>
+    <br />
+    <div class="file_size"></div>
+</body>
+</html>
